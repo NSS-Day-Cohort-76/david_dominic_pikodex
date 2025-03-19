@@ -1,11 +1,11 @@
-const database = [
+export const database = [
     {
         id: 1,
         name: 'Crouchy',
         imageUrl: 'assets/crouchy.png',
         category: 'Hunch',
-        abilities: 'Crouch',
-        weakness: 'Posture'
+        abilities: 'Super Crouch',
+        weakness: 'Posture',
     },
     {
         id: 2,
