@@ -53,8 +53,7 @@ export const database = [
         imageUrl: 'assets/tarmus.png',
         category: 'Rocks',
         abilities: 'Rock Solid Defense',
-        weakness: 'Moss Growth',
-        strength: 
+        weakness: 'Moss Growth'
     },
     {
         id: 8,
