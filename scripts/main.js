@@ -1,28 +1,21 @@
-import { frontCards } from "./pikomon.js"
-
-
-// const container = document.querySelector('#container')
-// const frontHTML = frontCards()
-
-// const backHTML = backCards()
-
-// container.innerHTML = frontHTML
-
-
+import { genPikoHTML } from './pikomon.js'
+// import { genBackPikoHTML } from './pikomon.js'
 
 const container = document.querySelector('#container')
-const frontHTML = frontCards()
+
+const frontHTML = genPikoHTML()
 
 container.innerHTML = frontHTML
+// container.innerHTML = backHTML
 
 const renderCards = () => {
-    const container = document.querySelector('#container');
-    container.innerHTML = frontCards();
-    const flippedCards = document.querySelectorAll('.piko-flip-card');
+    const container = document.querySelector('#container'); 
+    container.innerHTML = genPikoHTML();
+    const flippedCards = document.querySelectorAll('.piko-flip-card'); 
     flippedCards.forEach(card => {
         card.addEventListener('click', () => {
             const innerCard = card.querySelector('.piko-card-inner');
-            innerCard.classList.toggle('flipped');
+            innerCard.classList.toggle('flipped'); 
         })
     })
 }
