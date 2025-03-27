@@ -1,11 +1,47 @@
 import { database } from './database.js'
 
+const selectedPikos = []
+
+
+document.querySelectorAll(".piko-flip-card").forEach(obj => {addEventListener(
+        "click",
+        function(theClick){
+        const theTarget = theClick.target
+            debugger
+        if(selectedPikos.length === 2){
+            selectedPikos.forEach(el => el.classList.remove('selected'))
+            selectedPikos = []
+        }
+
+        obj.classList.add('selected')
+        selectedPikos.push(obj)
+
+        if(selectedPikos.length === 2){
+            comparePikos(selectedPikos[0], selectedPikos[1])
+    }}
+)
+
+    }
+    )
+
+const comparePikos = (piko1, piko2) => {
+    const fight1 = piko1.dataset.strength
+    const fight2 = piko2.dataset.strength
+    
+    if(fight1 > fight2){
+    window.alert(`${piko1.name}, is the Winner!`)    
+}
+    if(fight1 < fight2){
+        window.alert(`${piko2.name} is the Winner!`)
+    }
+}
 
 export const genPikoHTML = () => {
     let PikoHTML = ""
     for (const piko of database) { 
         PikoHTML += `
-        <div class="piko-flip-card">
+        
+        <div class="piko-flip-card" data-type="piko" data-strength="${piko.strength}">
             <div class="piko-card-inner">
                 <div class="piko-front">
                     <img src="${piko.imageUrl}" alt="${piko.name}" class="piko-img">
@@ -18,16 +54,9 @@ export const genPikoHTML = () => {
                 </div>
             </div>
         </div>
+    
         `;
     }
     return PikoHTML;
 };
 
-// export const genBackPikoHTML = () => { 
-//     let backPikoHTML = ""
-//     for (const piko of database) {
-//         backPikoHTML += `
-      
-//     }
-//     return backPikoHTML
-// }
