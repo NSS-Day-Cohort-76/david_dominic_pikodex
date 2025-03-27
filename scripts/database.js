@@ -6,7 +6,7 @@ export const database = [
         category: 'Hunch',
         abilities: 'Crouch',
         weakness: 'Posture',
-        strength: 70
+        strength: 80
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const database = [
         category: 'Small and Angry',
         abilities: 'Quick Reflexes',
         weakness: 'Impatience',
-        strength: 70
+        strength: 90
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const database = [
         category: 'Stinky',
         abilities: 'Toxic Gas Emission',
         weakness: 'Air Freshener',
-        strength: 40
+        strength: 30
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const database = [
         category: 'Kind of Stupid',
         abilities: 'Extraordinary Clumsiness',
         weakness: 'Sharp Objects',
-        strength: 100
+        strength: 60
     },
     {
         id: 5,
@@ -69,7 +69,7 @@ export const database = [
         category: 'Throw Rug',
         abilities: 'Tangle Trap',
         weakness: 'Vacuum Cleaners',
-        strength: 10
+        strength: 120
     },
     {
         id: 9,
