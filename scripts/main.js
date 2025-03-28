@@ -1,4 +1,4 @@
-import { genPikoHTML } from './pikomon.js'
+import { genPikoHTML, selectPikos } from './pikomon.js'
 // import { genBackPikoHTML } from './pikomon.js'
 
 const container = document.querySelector('#container')
@@ -7,6 +7,8 @@ const frontHTML = genPikoHTML()
 
 container.innerHTML = frontHTML
 // container.innerHTML = backHTML
+
+selectPikos()
 
 const renderCards = () => {
     const container = document.querySelector('#container'); 
@@ -19,4 +21,4 @@ const renderCards = () => {
         })
     })
 }
-  document.addEventListener('DOMContentLoaded', renderCards)
+  document.addEventListener('DOMContentLoaded', renderCards, selectPikos)
