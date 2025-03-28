@@ -1,7 +1,7 @@
 export const database = [
     {
         id: 1,
-        name: 'Crouchy',
+        name: 'Brandon',
         imageUrl: 'assets/crouchy.png',
         category: 'Hunch',
         abilities: 'Crouch',
@@ -10,7 +10,7 @@ export const database = [
     },
     {
         id: 2,
-        name: 'Flink',
+        name: 'Charlie',
         imageUrl: 'assets/flink.png',
         category: 'Small and Angry',
         abilities: 'Quick Reflexes',
@@ -19,7 +19,7 @@ export const database = [
     },
     {
         id: 3,
-        name: 'Putron',
+        name: 'Jake Littleton',
         imageUrl: 'assets/putron.png',
         category: 'Stinky',
         abilities: 'Toxic Gas Emission',
@@ -28,7 +28,7 @@ export const database = [
     },
     {
         id: 4,
-        name: 'Sherton',
+        name: 'Jon Young',
         imageUrl: 'assets/sherton.png',
         category: 'Kind of Stupid',
         abilities: 'Extraordinary Clumsiness',
@@ -37,7 +37,7 @@ export const database = [
     },
     {
         id: 5,
-        name: 'Gobojomo',
+        name: 'David',
         imageUrl: 'assets/gobojomo.png',
         category: 'Monkee',
         abilities: 'Banana Telekinesis',
@@ -46,7 +46,7 @@ export const database = [
     },
     {
         id: 6,
-        name: 'Luke Davis',
+        name: 'Luke Davids',
         imageUrl: 'assets/pete.png',
         category: 'Business',
         abilities: 'PowerPoint Mastery',
@@ -55,7 +55,7 @@ export const database = [
     },   
     {
         id: 7,
-        name: 'Tarmus',
+        name: 'Kyle',
         imageUrl: 'assets/tarmus.png',
         category: 'Rocks',
         abilities: 'Rock Solid Defense',
@@ -64,7 +64,7 @@ export const database = [
     },
     {
         id: 8,
-        name: 'Throrugg',
+        name: 'Dom',
         imageUrl: 'assets/throrugg.png',
         category: 'Throw Rug',
         abilities: 'Tangle Trap',
@@ -73,11 +73,11 @@ export const database = [
     },
     {
         id: 9,
-        name: 'Skunch',
+        name: 'Greg',
         imageUrl: 'assets/skunch.png',
-        category: 'Mischievous',
+        category: 'Mischievous, All Powerful',
         abilities: 'Master of Pranks',
-        weakness: 'Close Talkers',
+        weakness: 'Stupid Questions',
         strength: 150
     }
 ];
