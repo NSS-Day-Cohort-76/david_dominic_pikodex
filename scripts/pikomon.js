@@ -2,50 +2,42 @@ import { database } from './database.js'
 
 let selectedPikos = []
 
-// Function logic may not be working, not calling clickEvent when selcting ".piko-flip-card"
+
 export const selectPikos = () => {document.querySelectorAll(".piko-flip-card").forEach(card => {
     card.addEventListener(
         "click",
         () => {
-        debugger
-            if(selectedPikos.length === 2){
-                selectedPikos.forEach(el => el.classList.remove('selected'))
-                selectedPikos = []
-            }
-        })
+                    if(selectedPikos.length === 2){
+                        document.querySelectorAll(".piko-flip-card.selected").forEach(el => { el.classList.remove('selected')})
+                        selectedPikos = []
+                        }
+                    
+                    const pikoData = {
+                        name: card.querySelector('.piko-name').textContent,
+                        strength: Number(card.querySelector('.piko-front').dataset.strength),
+                    }
 
+                    selectedPikos.push(pikoData)
 
-    card.classList.add('selected')
-    selectedPikos.push(card)
-    if(selectedPikos.length === 2 ){
-        // for (const obj of selectedPikos) {
-        //     obj.classList.add('selected')
-        //     selectedPikos.push(obj)
-            
-        // }
-        comparePikos(selectedPikos[0], selectedPikos[1])
-}})
+                    if(selectedPikos.length === 2) {
+                        comparePikos(selectedPikos[0], selectedPikos[1])
+                    }
+                 }
+            )
+        }
+    )
 }
 
-        // "click",
-        //  () => {
-        //    const theTarget = theClick.target
-
-        //    selectedPikos.push(theTarget.dataset.strength)
-            
 
 export const comparePikos = (piko1, piko2) => {
-    const fight1 = piko1.dataset.strength
-    const fight2 = piko2.dataset.strength
+    const fight1 = piko1.strength
+    const fight2 = piko2.strength
 
-    const name1 = piko1.querySelector('.piko-name').textContent
-    const name2 = piko2.querySelector('.piko-name').textContent
-    
     if(fight1 > fight2){
-    window.alert(`${name1}, is the Winner!`)    
+    window.alert(`${piko1.name}, is the Winner!`)    
 }
     if(fight1 < fight2){
-        window.alert(`${name2} is the Winner!`)
+        window.alert(`${piko2.name} is the Winner!`)
     }
 }
 
@@ -73,40 +65,3 @@ export const genPikoHTML = () => {
     return PikoHTML;
 };
 
-let selectedPikos = []
-
-    document.querySelectorAll(".piko-flip-card").forEach(card => {
-        card.addEventListener("click", function () {
-
-        if(selectedPikos.length === 2){
-            selectedPikos.forEach(el => el.classList.remove('selected'))
-            selectedPikos = []
-        }
-
-            card.classList.add('selected')
-            selectedPikos.push(card)
-
-                    if(selectedPikos.length === 2){
-                        comparePikos(selectedPikos[0], selectedPikos[1])
-                    }
-                }
-            )
-        }
-    )
-
-
-const comparePikos = (piko1, piko2) => {
-    const fight1 = parseInt(piko1.dataset.strength)
-    const fight2 = parseInt(piko2.dataset.strength)
-    const name1 = piko1.querySelector(".piko-name").textContent
-    const name2 = piko2.querySelector(".piko-name").textContent
-
-    if(fight1 > fight2){
-    window.alert(`${name1}, is the Winner!`)    
-}
-    if(fight1 < fight2){
-        window.alert(`${name2} is the Winner!`)
-    } else {
-        window.alert("It's a tie!")
-    }
-}

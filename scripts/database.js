@@ -46,7 +46,7 @@ export const database = [
     },
     {
         id: 6,
-        name: 'Pete',
+        name: 'Luke Davis',
         imageUrl: 'assets/pete.png',
         category: 'Business',
         abilities: 'PowerPoint Mastery',
