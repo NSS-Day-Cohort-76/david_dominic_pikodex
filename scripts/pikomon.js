@@ -39,6 +39,8 @@ export const comparePikos = (piko1, piko2) => {
     if(fight1 < fight2){
         window.alert(`${piko2.name} is the Winner!`)
     }
+    if(fight1 === fight2)
+        window.alert(`The battle results in a draw!`)
 }
 
 export const genPikoHTML = () => {
